@@ -32,10 +32,11 @@
       --mint-light: #e9f8f2;
 
       --yellow: #f7c94c;
-      --yellow-light: #fff8df;
 
-      --pink: #e9a8bb;
-      --pink-light: #fcedf2;
+      --coral: #f28b66;
+      --green: #46b995;
+      --raspberry: #d95f8d;
+      --indigo: #5574c9;
 
       --blue-dark: #23263a;
 
@@ -50,7 +51,7 @@
         0 14px 34px rgba(54, 44, 98, 0.09);
 
       --shadow-hover:
-        0 18px 42px rgba(54, 44, 98, 0.15);
+        0 20px 46px rgba(54, 44, 98, 0.16);
 
       --radius: 22px;
       --radius-small: 14px;
@@ -68,10 +69,8 @@
 
 
     html {
-
       scroll-behavior: smooth;
       scroll-padding-top: 92px;
-
     }
 
 
@@ -88,11 +87,9 @@
         sans-serif;
 
       color: var(--text);
-
       background: var(--white);
 
       font-size: 17px;
-
       line-height: 1.6;
 
       -webkit-font-smoothing: antialiased;
@@ -101,13 +98,9 @@
 
 
     img {
-
       max-width: 100%;
-
       height: auto;
-
       display: block;
-
     }
 
 
@@ -123,11 +116,8 @@
 
 
     :focus-visible {
-
       outline: 3px solid var(--yellow);
-
       outline-offset: 4px;
-
     }
 
 
@@ -148,29 +138,20 @@
     }
 
 
+    /* ALTERNANCE DES FONDS */
+
     .section-soft {
-      background: var(--background);
-    }
-
-
-    /*
-      Bloc d'entrée plus gai et mieux marqué
-    */
-
-    .section-actions {
 
       background:
         linear-gradient(
           135deg,
-          #f3efff 0%,
+          #f2efff 0%,
+          #f4f3fb 47%,
           #eef8f4 100%
         );
 
-      border-top:
-        1px solid #ddd5fb;
-
-      border-bottom:
-        1px solid #ddd5fb;
+      border-top: 1px solid rgba(87, 68, 173, 0.06);
+      border-bottom: 1px solid rgba(87, 68, 173, 0.06);
 
     }
 
@@ -178,7 +159,6 @@
     .section-violet {
 
       background: var(--violet);
-
       color: var(--white);
 
     }
@@ -187,7 +167,6 @@
     .section-header {
 
       max-width: 760px;
-
       margin-bottom: 42px;
 
     }
@@ -200,11 +179,9 @@
       margin-bottom: 12px;
 
       font-size: 0.82rem;
-
       font-weight: 800;
 
       letter-spacing: 0.08em;
-
       text-transform: uppercase;
 
       color: var(--violet);
@@ -273,7 +250,6 @@
     h3 {
 
       font-size: 1.28rem;
-
       line-height: 1.25;
 
       color: var(--blue-dark);
@@ -286,7 +262,6 @@
     .lead {
 
       font-size: 1.18rem;
-
       line-height: 1.65;
 
       color: var(--muted);
@@ -305,7 +280,6 @@
     .site-header {
 
       position: sticky;
-
       top: 0;
 
       z-index: 1000;
@@ -313,8 +287,7 @@
       background:
         rgba(255, 255, 255, 0.96);
 
-      backdrop-filter:
-        blur(12px);
+      backdrop-filter: blur(12px);
 
       border-bottom:
         1px solid var(--border);
@@ -327,9 +300,7 @@
       min-height: 78px;
 
       display: flex;
-
       align-items: center;
-
       justify-content: space-between;
 
       gap: 30px;
@@ -340,7 +311,6 @@
     .brand {
 
       display: flex;
-
       align-items: center;
 
       gap: 15px;
@@ -357,7 +327,6 @@
     .brand img {
 
       max-height: 50px;
-
       width: auto;
 
     }
@@ -366,7 +335,6 @@
     .brand-text {
 
       font-size: 0.95rem;
-
       line-height: 1.2;
 
     }
@@ -375,7 +343,6 @@
     nav ul {
 
       display: flex;
-
       align-items: center;
 
       gap: 26px;
@@ -383,7 +350,6 @@
       list-style: none;
 
       margin: 0;
-
       padding: 0;
 
     }
@@ -394,7 +360,6 @@
       text-decoration: none;
 
       font-size: 0.92rem;
-
       font-weight: 700;
 
       color: var(--text);
@@ -456,13 +421,11 @@
     .hero-badge {
 
       display: inline-flex;
-
       align-items: center;
 
       gap: 9px;
 
       padding: 8px 14px;
-
       margin-bottom: 22px;
 
       border-radius: 999px;
@@ -474,7 +437,6 @@
         var(--violet-dark);
 
       font-size: 0.86rem;
-
       font-weight: 800;
 
     }
@@ -485,7 +447,6 @@
       content: "";
 
       width: 9px;
-
       height: 9px;
 
       border-radius: 50%;
@@ -503,7 +464,6 @@
     .hero-actions {
 
       display: flex;
-
       flex-wrap: wrap;
 
       gap: 14px;
@@ -550,7 +510,6 @@
       display: inline-flex;
 
       align-items: center;
-
       justify-content: center;
 
       gap: 9px;
@@ -567,7 +526,6 @@
       text-decoration: none;
 
       font-weight: 800;
-
       font-size: 0.95rem;
 
       transition:
@@ -579,8 +537,7 @@
 
 
     .btn:hover {
-      transform:
-        translateY(-2px);
+      transform: translateY(-2px);
     }
 
 
@@ -652,39 +609,66 @@
       grid-template-columns:
         repeat(5, 1fr);
 
-      gap: 16px;
+      gap: 18px;
 
     }
 
 
     .action-card {
 
-      min-height: 190px;
+      --accent: var(--violet);
 
-      padding: 24px;
+      position: relative;
+      overflow: hidden;
+
+      min-height: 200px;
+
+      padding: 25px 23px;
 
       display: flex;
-
       flex-direction: column;
+      justify-content: space-between;
 
-      justify-content:
-        space-between;
-
-      border-radius:
-        var(--radius);
+      border-radius: var(--radius);
 
       border:
-        1px solid
-        rgba(87, 68, 173, 0.08);
+        1px solid rgba(87, 68, 173, 0.09);
+
+      border-top:
+        6px solid var(--accent);
+
+      background:
+        rgba(255, 255, 255, 0.94);
 
       text-decoration: none;
 
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-
       box-shadow:
-        var(--shadow);
+        0 14px 30px rgba(54, 44, 98, 0.09);
+
+      transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease;
+
+    }
+
+
+    .action-card::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 125px;
+      height: 125px;
+
+      right: -55px;
+      top: -55px;
+
+      border-radius: 50%;
+
+      background: var(--accent);
+
+      opacity: 0.08;
 
     }
 
@@ -692,7 +676,7 @@
     .action-card:hover {
 
       transform:
-        translateY(-6px);
+        translateY(-7px);
 
       box-shadow:
         var(--shadow-hover);
@@ -702,52 +686,67 @@
 
     .action-number {
 
-      font-size: 0.8rem;
+      position: relative;
+      z-index: 1;
 
+      width: 46px;
+      height: 46px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 14px;
+
+      background: var(--accent);
+
+      color: var(--white);
+
+      font-size: 0.9rem;
       font-weight: 900;
 
-      letter-spacing: 0.08em;
+      letter-spacing: 0.05em;
 
-      opacity: 0.65;
+      box-shadow:
+        0 7px 16px rgba(49, 42, 78, 0.12);
 
     }
 
 
     .action-card h3 {
 
+      position: relative;
+      z-index: 1;
+
       margin:
-        28px 0 0;
+        32px 0 0;
+
+      font-size: 1.16rem;
 
     }
 
 
-    /*
-      Couleurs volontairement plus franches
-    */
-
-
     .action-card:nth-child(1) {
-      background: #dcd4ff;
+      --accent: var(--violet);
     }
 
 
     .action-card:nth-child(2) {
-      background: #ffe6a8;
+      --accent: var(--coral);
     }
 
 
     .action-card:nth-child(3) {
-      background: #c9f0e1;
+      --accent: var(--green);
     }
 
 
     .action-card:nth-child(4) {
-      background: #ffd7e3;
+      --accent: var(--raspberry);
     }
 
 
     .action-card:nth-child(5) {
-      background: #d9ecff;
+      --accent: var(--indigo);
     }
 
 
@@ -762,9 +761,7 @@
       display: flex;
 
       align-items: stretch;
-
-      justify-content:
-        space-between;
+      justify-content: space-between;
 
       gap: 10px;
 
@@ -778,7 +775,6 @@
       flex: 1;
 
       min-width: 0;
-
       min-height: 130px;
 
       padding:
@@ -787,7 +783,6 @@
       display: flex;
 
       align-items: center;
-
       justify-content: center;
 
       text-align: center;
@@ -819,14 +814,12 @@
       flex: 0 0 auto;
 
       display: flex;
-
       align-items: center;
 
       color:
         var(--violet);
 
       font-size: 1.5rem;
-
       font-weight: 900;
 
     }
@@ -896,7 +889,6 @@
         var(--violet-dark);
 
       font-size: 0.78rem;
-
       font-weight: 900;
 
     }
@@ -928,6 +920,89 @@
 
 
     /* =========================
+       INTRODUCTION AVEC PHOTO
+       ========================= */
+
+
+    .section-intro-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1fr)
+        minmax(320px, 0.72fr);
+
+      gap: 58px;
+
+      align-items: center;
+
+      margin-bottom: 52px;
+
+    }
+
+
+    .section-intro-grid .section-header {
+      margin-bottom: 0;
+    }
+
+
+    .section-photo {
+
+      position: relative;
+
+    }
+
+
+    .section-photo::before {
+
+      content: "";
+
+      position: absolute;
+
+      inset:
+        18px -15px -15px 18px;
+
+      border-radius: 24px;
+
+      background:
+        var(--violet-light);
+
+      z-index: 0;
+
+    }
+
+
+    .section-soft .section-photo::before {
+
+      background:
+        rgba(87, 68, 173, 0.13);
+
+    }
+
+
+    .section-photo img {
+
+      position: relative;
+      z-index: 1;
+
+      width: 100%;
+      height: 100%;
+
+      aspect-ratio: 4 / 3;
+
+      object-fit: cover;
+
+      border-radius: 24px;
+
+      box-shadow:
+        0 18px 38px
+        rgba(49, 42, 78, 0.15);
+
+    }
+
+
+
+    /* =========================
        BLOCS TERRAIN / VIDÉOS
        ========================= */
 
@@ -951,11 +1026,9 @@
       min-height: 340px;
 
       display: flex;
-
       flex-direction: column;
 
       align-items: center;
-
       justify-content: center;
 
       padding: 40px;
@@ -982,11 +1055,9 @@
     .video-icon {
 
       width: 70px;
-
       height: 70px;
 
       display: grid;
-
       place-items: center;
 
       margin-bottom: 20px;
@@ -1050,11 +1121,9 @@
     .takeaway-number {
 
       width: 30px;
-
       height: 30px;
 
       display: grid;
-
       place-items: center;
 
       border-radius: 50%;
@@ -1066,7 +1135,6 @@
         var(--white);
 
       font-size: 0.82rem;
-
       font-weight: 900;
 
     }
@@ -1158,14 +1226,12 @@
       position: absolute;
 
       top: 50%;
-
       right: 22px;
 
       transform:
         translateY(-50%);
 
       font-size: 1.5rem;
-
       font-weight: 500;
 
       color:
@@ -1234,7 +1300,6 @@
       padding: 24px;
 
       display: flex;
-
       flex-direction: column;
 
       border-radius:
@@ -1259,11 +1324,9 @@
       margin-bottom: 14px;
 
       font-size: 0.72rem;
-
       font-weight: 900;
 
       letter-spacing: 0.08em;
-
       text-transform: uppercase;
 
       color:
@@ -1285,8 +1348,7 @@
 
 
     .resource-card .btn {
-      align-self:
-        flex-start;
+      align-self: flex-start;
     }
 
 
@@ -1335,7 +1397,6 @@
       display: flex;
 
       align-items: center;
-
       justify-content:
         space-between;
 
@@ -1433,28 +1494,6 @@
     }
 
 
-    .coming-soon {
-
-      padding:
-        9px 14px;
-
-      border-radius: 999px;
-
-      background:
-        var(--yellow);
-
-      color:
-        var(--blue-dark);
-
-      font-size: 0.8rem;
-
-      font-weight: 900;
-
-      white-space: nowrap;
-
-    }
-
-
 
     /* =========================
        FOOTER
@@ -1502,8 +1541,7 @@
 
 
     footer a {
-      color:
-        var(--white);
+      color: var(--white);
     }
 
 
@@ -1540,8 +1578,7 @@
 
 
       .action-card:last-child {
-        grid-column:
-          span 2;
+        grid-column: span 2;
       }
 
 
@@ -1556,7 +1593,6 @@
       .process {
 
         flex-direction: column;
-
         align-items: stretch;
 
       }
@@ -1573,6 +1609,30 @@
 
         transform:
           rotate(90deg);
+
+      }
+
+    }
+
+
+
+    @media
+    (max-width: 900px) {
+
+
+      .section-intro-grid {
+
+        grid-template-columns:
+          1fr;
+
+        gap: 30px;
+
+      }
+
+
+      .section-photo {
+
+        max-width: 680px;
 
       }
 
@@ -1705,6 +1765,14 @@
 
       }
 
+
+      .section-photo::before {
+
+        inset:
+          10px -7px -8px 10px;
+
+      }
+
     }
 
 
@@ -1745,16 +1813,12 @@
 <body>
 
 
-  <!-- =========================
-       HEADER
-       ========================= -->
+  <!-- HEADER -->
 
 
   <header class="site-header">
 
-
     <div class="container header-inner">
-
 
       <a
         class="brand"
@@ -1762,29 +1826,20 @@
         aria-label="Retour en haut de page"
       >
 
-
         <img
           src="P&amp;C-LOGO.jpg"
           alt="Passerelles et Compétences"
         >
 
-
         <span class="brand-text">
-
           Espace référents<br>
           MDC
-
         </span>
-
 
       </a>
 
 
-
-      <nav
-        aria-label="Navigation principale"
-      >
-
+      <nav aria-label="Navigation principale">
 
         <ul>
 
@@ -1820,12 +1875,9 @@
 
         </ul>
 
-
       </nav>
 
-
     </div>
-
 
   </header>
 
@@ -1834,9 +1886,7 @@
   <main>
 
 
-    <!-- =========================
-         HERO
-         ========================= -->
+    <!-- HERO -->
 
 
     <section
@@ -1844,152 +1894,105 @@
       id="accueil"
     >
 
-
       <div class="container hero-grid">
-
 
         <div>
 
-
           <span class="hero-badge">
-
             Mécénat de compétences
-
           </span>
 
-
           <h1>
-
             Espace<br>
             référents MDC
-
           </h1>
 
-
           <p class="lead">
-
             Retrouvez les repères, exemples et outils utiles pour
             préparer vos prises de contact avec les acteurs relais et
             les PME, conduire vos premiers échanges et capitaliser sur
             vos retours terrain.
-
           </p>
 
-
           <div class="hero-actions">
-
 
             <a
               class="btn btn-primary"
               href="#agir"
             >
-
               Je prépare une action
-
             </a>
-
 
             <a
               class="btn btn-secondary"
               href="#outils"
             >
-
               Accéder aux outils
-
             </a>
 
-
           </div>
-
 
         </div>
 
 
-
         <div class="hero-image">
-
 
           <img
             src="illustration-espace-referents.png"
             alt="Un référent expérimenté met en relation des acteurs relais et des interlocuteurs d'entreprise"
           >
 
-
         </div>
 
-
       </div>
-
 
     </section>
 
 
 
-    <!-- =========================
-         QUE VOULEZ-VOUS FAIRE ?
-         ========================= -->
+    <!-- QUE VOULEZ-VOUS FAIRE ? -->
 
 
     <section
       id="agir"
-      class="section-soft section-actions"
+      class="section-soft"
     >
-
 
       <div class="container">
 
-
         <div class="section-header">
 
-
           <span class="eyebrow">
-
             Votre point de départ
-
           </span>
 
-
           <h2>
-
             Que voulez-vous faire ?
-
           </h2>
 
-
           <p class="lead">
-
             Entrez directement par votre situation du moment.
-
           </p>
-
 
         </div>
 
 
-
         <div class="action-grid">
-
 
           <a
             class="action-card"
             href="#demarche"
           >
 
-
             <span class="action-number">
               01
             </span>
 
-
             <h3>
-
               Comprendre la démarche
-
             </h3>
 
-
           </a>
-
 
 
           <a
@@ -1997,21 +2000,15 @@
             href="#relais"
           >
 
-
             <span class="action-number">
               02
             </span>
 
-
             <h3>
-
               Préparer un échange avec un acteur relais
-
             </h3>
 
-
           </a>
-
 
 
           <a
@@ -2019,21 +2016,15 @@
             href="#pme"
           >
 
-
             <span class="action-number">
               03
             </span>
 
-
             <h3>
-
               Préparer un échange avec une PME
-
             </h3>
 
-
           </a>
-
 
 
           <a
@@ -2041,21 +2032,15 @@
             href="#faq"
           >
 
-
             <span class="action-number">
               04
             </span>
 
-
             <h3>
-
               Trouver une réponse
-
             </h3>
 
-
           </a>
-
 
 
           <a
@@ -2063,72 +2048,49 @@
             href="#outils"
           >
 
-
             <span class="action-number">
               05
             </span>
 
-
             <h3>
-
               Télécharger un outil
-
             </h3>
-
 
           </a>
 
-
         </div>
 
-
       </div>
-
 
     </section>
 
 
 
-    <!-- =========================
-         DÉMARCHE
-         ========================= -->
+    <!-- DÉMARCHE -->
 
 
     <section id="demarche">
 
-
       <div class="container">
-
 
         <div class="section-header">
 
-
           <span class="eyebrow">
-
             Se repérer
-
           </span>
 
-
           <h2>
-
             De l’acteur relais à la PME
-
           </h2>
 
-
           <p class="lead">
-
             Le référent s’appuie d’abord sur les acteurs relais pour
             accéder aux entreprises pertinentes. Une fois la mise en
             relation réalisée, le premier échange permet de qualifier
             la situation de la PME avant d’envisager une suite.
-
           </p>
 
-
         </div>
-
 
 
         <div
@@ -2136,14 +2098,10 @@
           aria-label="Parcours d'approche des PME"
         >
 
-
           <div class="process-step">
-
             Acteur<br>
             relais
-
           </div>
-
 
           <div
             class="process-arrow"
@@ -2152,14 +2110,10 @@
             →
           </div>
 
-
           <div class="process-step">
-
             Mise en<br>
             relation
-
           </div>
-
 
           <div
             class="process-arrow"
@@ -2168,13 +2122,9 @@
             →
           </div>
 
-
           <div class="process-step">
-
             PME
-
           </div>
-
 
           <div
             class="process-arrow"
@@ -2183,14 +2133,10 @@
             →
           </div>
 
-
           <div class="process-step">
-
             Premier<br>
             échange
-
           </div>
-
 
           <div
             class="process-arrow"
@@ -2199,14 +2145,10 @@
             →
           </div>
 
-
           <div class="process-step">
-
             Qualification<br>
             de la situation
-
           </div>
-
 
           <div
             class="process-arrow"
@@ -2215,140 +2157,92 @@
             →
           </div>
 
-
           <div class="process-step">
-
             Suite<br>
             à donner
-
           </div>
 
-
         </div>
-
 
 
         <div class="pc-grid">
 
-
           <article class="pc-card">
 
-
             <span class="pc-label">
-
               PROFIL CIBLE PRINCIPAL
-
             </span>
 
-
             <h3>
-
               PC1 — PME structurée :
               fin de carrière &amp; transmission
-
             </h3>
-
 
             <ul>
 
-
               <li>
-
                 Une entreprise suffisamment structurée pour disposer
                 d’une véritable problématique RH de fin de carrière.
-
               </li>
 
-
               <li>
-
                 Des collaborateurs expérimentés dont les compétences
                 doivent être transmises ou dont la transition vers la
                 retraite mérite d’être préparée.
-
               </li>
-
 
               <li>
-
                 Une porte d’entrée prioritaire pour explorer le MDC
                 de fin de carrière.
-
               </li>
-
 
             </ul>
 
-
           </article>
-
 
 
           <article class="pc-card pc2">
 
-
             <span class="pc-label">
-
               HYPOTHÈSE TERRAIN À QUALIFIER
-
             </span>
 
-
             <h3>
-
               PC2 — PME à compétences clés :
               développement &amp; fidélisation
-
             </h3>
-
 
             <ul>
 
-
               <li>
-
                 Une PME confrontée à des enjeux de fidélisation,
                 d’engagement ou de développement de compétences clés.
-
               </li>
 
-
               <li>
-
                 Le MDC peut constituer une piste dans certaines
                 situations, mais il ne doit pas être présenté comme
                 une réponse automatique.
-
               </li>
-
 
               <li>
-
                 Les retours terrain doivent permettre de confirmer ou
                 d’ajuster ce profil.
-
               </li>
-
 
             </ul>
 
-
           </article>
-
 
         </div>
 
-
       </div>
-
 
     </section>
 
 
 
-    <!-- =========================
-         ACTEURS RELAIS
-         ========================= -->
+    <!-- ACTEURS RELAIS -->
 
 
     <section
@@ -2356,73 +2250,65 @@
       class="section-soft"
     >
 
-
       <div class="container">
 
 
-        <div class="section-header">
+        <div class="section-intro-grid">
+
+          <div class="section-header">
+
+            <span class="eyebrow">
+              Première étape terrain
+            </span>
+
+            <h2>
+              Je prépare un échange avec un acteur relais
+            </h2>
+
+            <p class="lead">
+              L’acteur relais constitue une porte d’entrée vers les PME.
+              Il n’a pas vocation à devenir expert du MDC : l’enjeu est
+              qu’il comprenne suffisamment la démarche pour identifier
+              des entreprises potentiellement concernées et faciliter la
+              mise en relation.
+            </p>
+
+          </div>
 
 
-          <span class="eyebrow">
+          <div class="section-photo">
 
-            Première étape terrain
+            <img
+              src="photo-echange-acteur-relais.png"
+              alt="Échange professionnel entre une référente expérimentée et une interlocutrice d'un réseau d'entreprises"
+              loading="lazy"
+            >
 
-          </span>
-
-
-          <h2>
-
-            Je prépare un échange avec un acteur relais
-
-          </h2>
-
-
-          <p class="lead">
-
-            L’acteur relais constitue une porte d’entrée vers les PME.
-            Il n’a pas vocation à devenir expert du MDC : l’enjeu est
-            qu’il comprenne suffisamment la démarche pour identifier
-            des entreprises potentiellement concernées et faciliter la
-            mise en relation.
-
-          </p>
-
+          </div>
 
         </div>
 
 
-
         <div class="field-grid">
 
-
           <div class="video-placeholder">
-
 
             <div
               class="video-icon"
               aria-hidden="true"
             >
-
               ▶
-
             </div>
 
-
             <h3>
-
               Exemple : un premier échange avec un acteur relais
-
             </h3>
 
-
             <p>
-
               Une simulation concrète pour voir comment écouter l’acteur
               relais, comprendre son activité, faire le lien avec P&amp;C
               et obtenir un premier pas réaliste.
-
             </p>
-
 
             <a
               class="btn btn-primary"
@@ -2430,211 +2316,159 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-
               Voir l’exemple vidéo
-
             </a>
-
 
           </div>
 
 
-
           <div>
 
-
             <h3>
-
               3 réflexes à conserver
-
             </h3>
-
 
 
             <div class="takeaways">
 
-
               <div class="takeaway">
-
 
                 <span class="takeaway-number">
                   1
                 </span>
 
-
                 <p>
-
                   Comprendre d’abord son rôle, son territoire et le type
                   d’entreprises qu’il accompagne.
-
                 </p>
-
 
               </div>
 
 
-
               <div class="takeaway">
-
 
                 <span class="takeaway-number">
                   2
                 </span>
 
-
                 <p>
-
                   Lui donner quelques critères simples permettant de
                   reconnaître une PME potentiellement concernée.
-
                 </p>
-
 
               </div>
 
 
-
               <div class="takeaway">
-
 
                 <span class="takeaway-number">
                   3
                 </span>
 
-
                 <p>
-
                   Rechercher une action concrète : mise en relation,
                   présentation, diffusion ciblée ou événement.
-
                 </p>
 
-
               </div>
-
 
             </div>
 
 
-
             <div class="download-panel">
 
-
               <h3>
-
                 Pour structurer votre approche
-
               </h3>
 
-
               <p>
-
                 Le guide d’activation rassemble les principaux repères
                 permettant de travailler avec les acteurs relais.
-
               </p>
-
 
               <a
                 class="btn btn-primary btn-download"
                 href="Guide Activation Acteurs relais-P&amp;C-2608-v2.pptx"
                 download
               >
-
                 Guide Activation Acteurs relais
-
               </a>
-
 
             </div>
 
-
           </div>
-
 
         </div>
 
-
       </div>
-
 
     </section>
 
 
 
-    <!-- =========================
-         PME
-         ========================= -->
+    <!-- PME -->
 
 
     <section id="pme">
 
-
       <div class="container">
 
 
-        <div class="section-header">
+        <div class="section-intro-grid">
+
+          <div class="section-header">
+
+            <span class="eyebrow">
+              Après la mise en relation
+            </span>
+
+            <h2>
+              Je prépare un premier échange avec une PME
+            </h2>
+
+            <p class="lead">
+              Le premier échange sert d’abord à comprendre la situation
+              de l’entreprise. Le MDC n’est présenté qu’ensuite, lorsque
+              les enjeux identifiés le rendent pertinent.
+            </p>
+
+          </div>
 
 
-          <span class="eyebrow">
+          <div class="section-photo">
 
-            Après la mise en relation
+            <img
+              src="photo-echange-pme.png"
+              alt="Échange professionnel entre un référent expérimenté et une interlocutrice d'une PME"
+              loading="lazy"
+            >
 
-          </span>
-
-
-          <h2>
-
-            Je prépare un premier échange avec une PME
-
-          </h2>
-
-
-          <p class="lead">
-
-            Le premier échange sert d’abord à comprendre la situation
-            de l’entreprise. Le MDC n’est présenté qu’ensuite, lorsque
-            les enjeux identifiés le rendent pertinent.
-
-          </p>
-
+          </div>
 
         </div>
 
 
-
         <div class="field-grid">
 
-
           <div class="video-placeholder">
-
 
             <div
               class="video-icon"
               aria-hidden="true"
             >
-
               ▶
-
             </div>
 
-
             <h3>
-
               Exemple : un premier échange avec une PME PC1
-
             </h3>
 
-
             <p>
-
               Une simulation concrète pour voir comment partir de la
               situation de l’entreprise, qualifier un enjeu de fin de
               carrière et introduire le MDC seulement lorsqu’il devient
               pertinent.
-
             </p>
-
 
             <a
               class="btn btn-primary"
@@ -2642,141 +2476,97 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-
               Voir l’exemple vidéo
-
             </a>
-
 
           </div>
 
 
-
           <div>
 
-
             <h3>
-
               3 réflexes à conserver
-
             </h3>
-
 
 
             <div class="takeaways">
 
-
               <div class="takeaway">
-
 
                 <span class="takeaway-number">
                   1
                 </span>
 
-
                 <p>
-
                   Partir de l’entreprise et de ses enjeux, pas d’une
                   présentation générale du MDC.
-
                 </p>
-
 
               </div>
 
 
-
               <div class="takeaway">
-
 
                 <span class="takeaway-number">
                   2
                 </span>
 
-
                 <p>
-
                   Questionner avant d’argumenter : fin de carrière,
                   transmission, compétences sensibles ou enjeux RH.
-
                 </p>
-
 
               </div>
 
 
-
               <div class="takeaway">
-
 
                 <span class="takeaway-number">
                   3
                 </span>
 
-
                 <p>
-
                   Terminer le premier échange par une prochaine étape
                   simple plutôt que chercher à conclure immédiatement.
-
                 </p>
 
-
               </div>
-
 
             </div>
 
 
-
             <div class="download-panel">
 
-
               <h3>
-
                 Avant l’échange
-
               </h3>
 
-
               <p>
-
                 Gardez la fiche réflexe à portée de main pour préparer
                 ou conduire votre premier entretien.
-
               </p>
-
 
               <a
                 class="btn btn-primary btn-download"
                 href="Fiche réflexe pilote-P&amp;C-2609-v2.pdf"
                 download
               >
-
                 Fiche réflexe pilote
-
               </a>
-
 
             </div>
 
-
           </div>
-
 
         </div>
 
-
       </div>
-
 
     </section>
 
 
 
-    <!-- =========================
-         FAQ
-         ========================= -->
+    <!-- FAQ -->
 
 
     <section
@@ -2784,37 +2574,24 @@
       class="section-soft"
     >
 
-
       <div class="container">
-
 
         <div class="section-header">
 
-
           <span class="eyebrow">
-
             Trouver une réponse
-
           </span>
 
-
           <h2>
-
             Questions fréquentes
-
           </h2>
 
-
           <p class="lead">
-
             Quelques repères pour vérifier rapidement un point avant ou
             après un échange.
-
           </p>
 
-
         </div>
-
 
 
         <div class="faq-list">
@@ -2822,213 +2599,142 @@
 
           <details>
 
-
             <summary>
-
               Qu’est-ce que le mécénat de compétences ?
-
             </summary>
 
-
             <div class="faq-answer">
-
               Le MDC correspond à la mise à disposition, par une
               entreprise, d’un collaborateur volontaire sur son temps
               de travail au profit d’un organisme d’intérêt général.
-
             </div>
-
 
           </details>
 
 
-
           <details>
 
-
             <summary>
-
               Passerelles et Compétences dispose-t-elle d’une offre de MDC ?
-
             </summary>
 
-
             <div class="faq-answer">
-
               Non. P&amp;C n’a pas d’offre standardisée de MDC.
               L’association informe, sensibilise, conseille et peut
               faciliter certaines mises en relation selon les situations.
-
             </div>
-
 
           </details>
 
 
-
           <details>
 
-
             <summary>
-
               Qu’est-ce que PC1 ?
-
             </summary>
 
-
             <div class="faq-answer">
-
               PC1 signifie « Profil Cible 1 ». Il correspond à la
               « PME structurée : fin de carrière &amp; transmission ».
               C’est le profil prioritaire pour explorer les situations
               de MDC de fin de carrière.
-
             </div>
-
 
           </details>
 
 
-
           <details>
 
-
             <summary>
-
               Qu’est-ce que PC2 ?
-
             </summary>
 
-
             <div class="faq-answer">
-
               PC2 signifie « Profil Cible 2 ». Il correspond à la
               « PME à compétences clés : développement &amp; fidélisation ».
               Il reste à considérer comme une hypothèse terrain à
               qualifier par les échanges.
-
             </div>
-
 
           </details>
 
 
-
           <details>
 
-
             <summary>
-
               Faut-il privilégier certains secteurs d’activité ?
-
             </summary>
 
-
             <div class="faq-answer">
-
               La logique principale repose sur la situation de
               l’entreprise plutôt que sur son seul secteur d’activité.
               Une approche sectorielle locale peut faciliter la
               prospection, mais elle ne remplace pas les critères du
               Profil Cible.
-
             </div>
-
 
           </details>
 
 
-
           <details>
 
-
             <summary>
-
               Pourquoi commencer par un acteur relais ?
-
             </summary>
 
-
             <div class="faq-answer">
-
               L’acteur relais facilite l’accès aux entreprises grâce à
               sa connaissance du tissu économique, de ses adhérents ou
               de son réseau. Il permet au référent de concentrer ses
               efforts sur des PME potentiellement pertinentes.
-
             </div>
-
 
           </details>
 
 
-
           <details>
 
-
             <summary>
-
               Quel est le rôle d’un acteur relais ?
-
             </summary>
 
-
             <div class="faq-answer">
-
               Il aide à identifier ou à atteindre des PME pertinentes
               et peut faciliter une mise en relation, une présentation
               ou une diffusion ciblée. Il n’a pas besoin de devenir
               spécialiste du MDC.
-
             </div>
-
 
           </details>
 
 
-
           <details>
 
-
             <summary>
-
               Quel est l’objectif du premier échange avec une PME ?
-
             </summary>
 
-
             <div class="faq-answer">
-
               Comprendre la situation de l’entreprise et vérifier s’il
               existe un enjeu auquel le MDC peut utilement contribuer.
               Il ne s’agit pas de présenter immédiatement tout le
               dispositif.
-
             </div>
-
 
           </details>
 
 
-
           <details>
 
-
             <summary>
-
               Que dois-je faire après un échange terrain ?
-
             </summary>
 
-
             <div class="faq-answer">
-
               Capitaliser les informations utiles et les étonnements
               dans la fiche retour terrain afin de faire évoluer la
               démarche à partir des expériences réelles.
-
             </div>
-
 
           </details>
 
@@ -3036,31 +2742,22 @@
         </div>
 
 
-
         <div
           class="assistant-box"
           style="margin-top: 38px;"
         >
 
-
           <div>
 
-
             <h3>
-
               Besoin d’aller plus loin ?
-
             </h3>
 
-
             <p>
-
               Interrogez l’assistant référents MDC à partir des ressources
               du projet : profils cibles, acteurs relais, préparation des
               échanges et outils disponibles.
-
             </p>
-
 
           </div>
 
@@ -3075,58 +2772,39 @@
               color: var(--blue-dark);
             "
           >
-
             Interroger l’assistant
-
           </a>
-
 
         </div>
 
-
       </div>
-
 
     </section>
 
 
 
-    <!-- =========================
-         OUTILS
-         ========================= -->
+    <!-- OUTILS -->
 
 
     <section id="outils">
 
-
       <div class="container">
-
 
         <div class="section-header">
 
-
           <span class="eyebrow">
-
             Ressources terrain
-
           </span>
 
-
           <h2>
-
             Mes outils
-
           </h2>
 
-
           <p class="lead">
-
             Les ressources suivent le déroulement de votre démarche :
             préparer votre action, travailler avec un acteur relais,
             préparer l’échange avec la PME puis présenter le MDC.
-
           </p>
-
 
         </div>
 
@@ -3137,13 +2815,9 @@
 
         <div class="resource-group">
 
-
           <h3 class="resource-group-title">
-
             1. Préparer et capitaliser l’action terrain
-
           </h3>
-
 
 
           <div class="resource-grid">
@@ -3151,85 +2825,57 @@
 
             <article class="resource-card">
 
-
               <span class="resource-type">
-
                 Premier échange
-
               </span>
 
-
               <h3>
-
                 Fiche réflexe pilote
-
               </h3>
 
-
               <p>
-
                 Le support à conserver sous la main pour préparer ou
                 conduire un premier échange.
-
               </p>
-
 
               <a
                 class="btn btn-soft btn-download"
                 href="Fiche réflexe pilote-P&amp;C-2609-v2.pdf"
                 download
               >
-
                 Télécharger
-
               </a>
-
 
             </article>
 
 
-
             <article class="resource-card">
 
-
               <span class="resource-type">
-
                 Capitalisation
-
               </span>
 
-
               <h3>
-
                 Fiche retour terrain
-
               </h3>
 
-
               <p>
-
                 Pour consigner ce qui fonctionne, les objections,
                 étonnements et enseignements issus des échanges.
-
               </p>
-
 
               <a
                 class="btn btn-soft btn-download"
                 href="Fiche retour terrain-P&amp;C-2609-v3.pdf"
                 download
               >
-
                 Télécharger
-
               </a>
-
 
             </article>
 
 
           </div>
-
 
         </div>
 
@@ -3240,48 +2886,34 @@
 
         <div class="resource-group">
 
-
           <h3 class="resource-group-title">
-
             2. Travailler avec les acteurs relais
-
           </h3>
-
 
 
           <div class="relay-box">
 
-
             <p>
-
               Commencez par le guide d’activation, puis utilisez la
               fiche correspondant à l’acteur relais que vous souhaitez
               solliciter.
-
             </p>
 
 
-
             <div style="margin: 22px 0 28px;">
-
 
               <a
                 class="btn btn-primary btn-download"
                 href="Guide Activation Acteurs relais-P&amp;C-2608-v2.pptx"
                 download
               >
-
                 Guide Activation Acteurs relais
-
               </a>
-
 
             </div>
 
 
-
             <div class="relay-grid">
-
 
               <a
                 class="relay-link"
@@ -3291,7 +2923,6 @@
                 CCI
               </a>
 
-
               <a
                 class="relay-link"
                 href="Fiche Mécénat CERFRANCE-P&amp;C-2607-v1.pdf"
@@ -3299,7 +2930,6 @@
               >
                 CERFRANCE
               </a>
-
 
               <a
                 class="relay-link"
@@ -3309,7 +2939,6 @@
                 CJD
               </a>
 
-
               <a
                 class="relay-link"
                 href="Fiche Mécénat CPME LESENTREPRENEURS-P&amp;C-2607-v1.pdf"
@@ -3317,7 +2946,6 @@
               >
                 CPME / Les Entrepreneurs
               </a>
-
 
               <a
                 class="relay-link"
@@ -3327,7 +2955,6 @@
                 FACE
               </a>
 
-
               <a
                 class="relay-link"
                 href="Fiche Mécénat KLESIA-P&amp;C-2608-v3.pdf"
@@ -3335,7 +2962,6 @@
               >
                 KLESIA
               </a>
-
 
               <a
                 class="relay-link"
@@ -3345,7 +2971,6 @@
                 Les Entreprises s’Engagent
               </a>
 
-
               <a
                 class="relay-link"
                 href="Fiche Mécénat LEPC-P&amp;C-2608-v2.pdf"
@@ -3353,7 +2978,6 @@
               >
                 LEPC
               </a>
-
 
               <a
                 class="relay-link"
@@ -3363,7 +2987,6 @@
                 LUCIE
               </a>
 
-
               <a
                 class="relay-link"
                 href="Fiche Mécénat OPCO EP-P&amp;C-2607-v2.pdf"
@@ -3372,12 +2995,9 @@
                 OPCO EP
               </a>
 
-
             </div>
 
-
           </div>
-
 
         </div>
 
@@ -3388,13 +3008,9 @@
 
         <div class="resource-group">
 
-
           <h3 class="resource-group-title">
-
             3. Préparer son échange avec la PME
-
           </h3>
-
 
 
           <div class="resource-grid">
@@ -3402,149 +3018,109 @@
 
             <article class="resource-card">
 
-
               <span class="resource-type">
                 PC1
               </span>
-
 
               <h3>
                 Dirigeant
               </h3>
 
-
               <p>
-
                 Repères pour adapter l’échange au dirigeant d’une PME
                 correspondant au Profil Cible 1.
-
               </p>
-
 
               <a
                 class="btn btn-soft btn-download"
                 href="Fiche Dirigeant PC1-P&amp;C-2609-v2.pdf"
                 download
               >
-
                 Télécharger
-
               </a>
-
 
             </article>
 
 
-
             <article class="resource-card">
-
 
               <span class="resource-type">
                 PC1
               </span>
 
-
               <h3>
                 DRH
               </h3>
 
-
               <p>
-
                 Repères pour un échange avec une DRH sur les enjeux de
                 fin de carrière et de transmission.
-
               </p>
-
 
               <a
                 class="btn btn-soft btn-download"
                 href="Fiche DRH PC1-P&amp;C-2609-v2.pdf"
                 download
               >
-
                 Télécharger
-
               </a>
-
 
             </article>
 
 
-
             <article class="resource-card">
-
 
               <span class="resource-type">
                 PC2
               </span>
 
-
               <h3>
                 Dirigeant
               </h3>
 
-
               <p>
-
                 Repères pour explorer les enjeux de développement et de
                 fidélisation avec le dirigeant.
-
               </p>
-
 
               <a
                 class="btn btn-soft btn-download"
                 href="Fiche Dirigeant PC2-P&amp;C-2609-v2.pdf"
                 download
               >
-
                 Télécharger
-
               </a>
-
 
             </article>
 
 
-
             <article class="resource-card">
-
 
               <span class="resource-type">
                 PC2
               </span>
 
-
               <h3>
                 DRH
               </h3>
 
-
               <p>
-
                 Repères permettant d’explorer avec la DRH les enjeux de
                 compétences clés et de fidélisation.
-
               </p>
-
 
               <a
                 class="btn btn-soft btn-download"
                 href="Fiche DRH PC2-P&amp;C-2609-v2.pdf"
                 download
               >
-
                 Télécharger
-
               </a>
-
 
             </article>
 
 
           </div>
-
 
         </div>
 
@@ -3555,13 +3131,9 @@
 
         <div class="resource-group">
 
-
           <h3 class="resource-group-title">
-
             4. Présenter le MDC à l’entreprise
-
           </h3>
-
 
 
           <div class="resource-grid">
@@ -3569,123 +3141,82 @@
 
             <article class="resource-card">
 
-
               <span class="resource-type">
-
                 Document à remettre
-
               </span>
 
-
               <h3>
-
                 Flyer Entreprises 2026
-
               </h3>
 
-
               <p>
-
                 Une présentation synthétique du MDC destinée aux
                 dirigeants et collaborateurs de PME et ETI.
-
               </p>
-
 
               <a
                 class="btn btn-soft btn-download"
                 href="MDC - Flyer ENTREPRISES_2026.pdf"
                 download
               >
-
                 Télécharger
-
               </a>
-
 
             </article>
 
 
-
             <article class="resource-card">
 
-
               <span class="resource-type">
-
                 Présentation
-
               </span>
 
-
               <h3>
-
                 Support de sensibilisation Entreprises 2026
-
               </h3>
 
-
               <p>
-
                 Le support destiné à présenter plus complètement le
                 mécénat de compétences aux entreprises.
-
               </p>
-
 
               <a
                 class="btn btn-soft btn-download"
                 href="MDC - Sensibilisation - Support  ENTREPRISES 2026.pdf"
                 download
               >
-
                 Télécharger
-
               </a>
-
 
             </article>
 
 
           </div>
 
-
         </div>
 
-
       </div>
-
 
     </section>
 
 
 
-    <!-- =========================
-         CONCLUSION
-         ========================= -->
+    <!-- CONCLUSION -->
 
 
     <section class="section-violet">
 
-
       <div class="container">
-
 
         <div class="section-header">
 
-
           <span class="eyebrow">
-
             L’essentiel
-
           </span>
 
-
           <h2>
-
             Une ingénierie au service de l’action
-
           </h2>
-
 
           <p
             class="lead"
@@ -3693,17 +3224,13 @@
               color: rgba(255,255,255,0.83);
             "
           >
-
             Les outils sont là pour faciliter les échanges, pas pour
             les rigidifier. Les retours terrain permettront de faire
             évoluer progressivement les profils, les argumentaires et
             les approches.
-
           </p>
 
-
         </div>
-
 
 
         <a
@@ -3715,14 +3242,10 @@
             color: var(--blue-dark);
           "
         >
-
           ↓ Télécharger la fiche retour terrain
-
         </a>
 
-
       </div>
-
 
     </section>
 
@@ -3731,64 +3254,43 @@
 
 
 
-  <!-- =========================
-       FOOTER
-       ========================= -->
+  <!-- FOOTER -->
 
 
   <footer>
 
-
     <div class="container footer-grid">
-
 
       <div>
 
-
         <strong>
-
           Passerelles et Compétences
-
         </strong>
 
-
         <div>
-
           Mobilisés pour un monde solidaire
-
         </div>
 
-
         <div style="margin-top: 12px;">
-
 
           <a
             href="https://www.passerellesetcompetences.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
-
             www.passerellesetcompetences.org
-
           </a>
-
 
         </div>
 
-
       </div>
-
 
 
       <div class="footer-small">
-
         Espace référents MDC — version septembre 2026
-
       </div>
 
-
     </div>
-
 
   </footer>
 
