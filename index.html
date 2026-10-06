@@ -138,7 +138,10 @@
     }
 
 
-    /* ALTERNANCE DES FONDS */
+    /* =========================
+       ALTERNANCE DES FONDS
+       ========================= */
+
 
     .section-soft {
 
@@ -150,8 +153,11 @@
           #eef8f4 100%
         );
 
-      border-top: 1px solid rgba(87, 68, 173, 0.06);
-      border-bottom: 1px solid rgba(87, 68, 173, 0.06);
+      border-top:
+        1px solid rgba(87, 68, 173, 0.06);
+
+      border-bottom:
+        1px solid rgba(87, 68, 173, 0.06);
 
     }
 
@@ -159,6 +165,7 @@
     .section-violet {
 
       background: var(--violet);
+
       color: var(--white);
 
     }
@@ -167,6 +174,7 @@
     .section-header {
 
       max-width: 760px;
+
       margin-bottom: 42px;
 
     }
@@ -947,9 +955,7 @@
 
 
     .section-photo {
-
       position: relative;
-
     }
 
 
@@ -1263,7 +1269,7 @@
 
 
     .resource-group {
-      margin-bottom: 54px;
+      margin-bottom: 62px;
     }
 
 
@@ -1287,6 +1293,36 @@
 
       grid-template-columns:
         repeat(3, 1fr);
+
+      gap: 18px;
+
+    }
+
+
+    /* Grille spéciale PME :
+       PC1 sur la première ligne,
+       PC2 sur la seconde */
+
+    .resource-grid-pme {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 18px;
+
+    }
+
+
+    /* Une seule ressource */
+
+    .resource-grid-single {
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 560px);
 
       gap: 18px;
 
@@ -1371,6 +1407,19 @@
       border:
         1px solid
         var(--border);
+
+    }
+
+
+    .relay-actions {
+
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin:
+        22px 0 28px;
 
     }
 
@@ -1593,6 +1642,7 @@
       .process {
 
         flex-direction: column;
+
         align-items: stretch;
 
       }
@@ -1631,9 +1681,7 @@
 
 
       .section-photo {
-
         max-width: 680px;
-
       }
 
     }
@@ -1689,6 +1737,11 @@
         grid-template-columns: 1fr;
       }
 
+
+      .resource-grid-pme {
+        grid-template-columns: 1fr;
+      }
+
     }
 
 
@@ -1729,7 +1782,8 @@
 
 
       .action-grid,
-      .resource-grid {
+      .resource-grid,
+      .resource-grid-single {
 
         grid-template-columns:
           1fr;
@@ -1742,7 +1796,8 @@
       }
 
 
-      .hero-actions {
+      .hero-actions,
+      .relay-actions {
         flex-direction: column;
       }
 
@@ -1813,7 +1868,9 @@
 <body>
 
 
-  <!-- HEADER -->
+  <!-- =========================
+       HEADER
+       ========================= -->
 
 
   <header class="site-header">
@@ -1886,7 +1943,9 @@
   <main>
 
 
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+         ========================= -->
 
 
     <section
@@ -1950,7 +2009,9 @@
 
 
 
-    <!-- QUE VOULEZ-VOUS FAIRE ? -->
+    <!-- =========================
+         QUE VOULEZ-VOUS FAIRE ?
+         ========================= -->
 
 
     <section
@@ -2066,7 +2127,9 @@
 
 
 
-    <!-- DÉMARCHE -->
+    <!-- =========================
+         DÉMARCHE
+         ========================= -->
 
 
     <section id="demarche">
@@ -2242,7 +2305,9 @@
 
 
 
-    <!-- ACTEURS RELAIS -->
+    <!-- =========================
+         ACTEURS RELAIS
+         ========================= -->
 
 
     <section
@@ -2388,7 +2453,7 @@
 
               <a
                 class="btn btn-primary btn-download"
-                href="Guide Activation Acteurs relais-P&amp;C-2608-v2.pptx"
+                href="Guide Activation Acteurs relais-P&amp;C-2608-v2.pdf"
                 download
               >
                 Guide Activation Acteurs relais
@@ -2406,7 +2471,9 @@
 
 
 
-    <!-- PME -->
+    <!-- =========================
+         PME
+         ========================= -->
 
 
     <section id="pme">
@@ -2566,7 +2633,9 @@
 
 
 
-    <!-- FAQ -->
+    <!-- =========================
+         FAQ
+         ========================= -->
 
 
     <section
@@ -2783,7 +2852,9 @@
 
 
 
-    <!-- OUTILS -->
+    <!-- =========================
+         OUTILS
+         ========================= -->
 
 
     <section id="outils">
@@ -2802,21 +2873,374 @@
 
           <p class="lead">
             Les ressources suivent le déroulement de votre démarche :
-            préparer votre action, travailler avec un acteur relais,
-            préparer l’échange avec la PME puis présenter le MDC.
+            travailler avec les acteurs relais, préparer l’échange avec
+            une PME, présenter le MDC, préparer et capitaliser l’action
+            terrain puis préparer votre pitch.
           </p>
 
         </div>
 
 
 
-        <!-- 1. KIT TERRAIN -->
+        <!-- =========================
+             1. ACTEURS RELAIS
+             ========================= -->
 
 
         <div class="resource-group">
 
           <h3 class="resource-group-title">
-            1. Préparer et capitaliser l’action terrain
+            1. Travailler avec les acteurs relais
+          </h3>
+
+
+          <div class="relay-box">
+
+            <p>
+              Commencez par le guide d’activation, consultez si besoin
+              le guide d’utilisation du fichier Acteurs relais, puis
+              utilisez la fiche correspondant à l’acteur que vous
+              souhaitez solliciter.
+            </p>
+
+
+            <div class="relay-actions">
+
+              <a
+                class="btn btn-primary btn-download"
+                href="Guide Activation Acteurs relais-P&amp;C-2608-v2.pdf"
+                download
+              >
+                Guide Activation Acteurs relais
+              </a>
+
+
+              <a
+                class="btn btn-soft btn-download"
+                href="Guide utilisation fichier Acteurs relais-P&amp;C-2609-v1.pdf"
+                download
+              >
+                Guide d’utilisation du fichier
+              </a>
+
+            </div>
+
+
+            <div class="relay-grid">
+
+
+              <a
+                class="relay-link"
+                href="Fiche Mécénat CCI-P&amp;C-2606-v1.pdf"
+                download
+              >
+                CCI
+              </a>
+
+
+              <a
+                class="relay-link"
+                href="Fiche Mécénat CERFRANCE-P&amp;C-2607-v1.pdf"
+                download
+              >
+                CERFRANCE
+              </a>
+
+
+              <a
+                class="relay-link"
+                href="Fiche Mécénat CJD-P&amp;C-2607-v3.pdf"
+                download
+              >
+                CJD
+              </a>
+
+
+              <a
+                class="relay-link"
+                href="Fiche Mécénat CPME LESENTREPRENEURS-P&amp;C-2607-v1.pdf"
+                download
+              >
+                CPME / Les Entrepreneurs
+              </a>
+
+
+              <a
+                class="relay-link"
+                href="Fiche Mécénat FACE-P&amp;C-2607-v1.pdf"
+                download
+              >
+                FACE
+              </a>
+
+
+              <a
+                class="relay-link"
+                href="Fiche Mécénat KLESIA-P&amp;C-2608-v3.pdf"
+                download
+              >
+                KLESIA
+              </a>
+
+
+              <a
+                class="relay-link"
+                href="Fiche Mécénat LEE-P&amp;C-2607-v4.pdf"
+                download
+              >
+                Les Entreprises s’Engagent
+              </a>
+
+
+              <a
+                class="relay-link"
+                href="Fiche Mécénat LEPC-P&amp;C-2608-v2.pdf"
+                download
+              >
+                LEPC
+              </a>
+
+
+              <a
+                class="relay-link"
+                href="Fiche Mécénat LUCIE-P&amp;C-2607-v2.pdf"
+                download
+              >
+                LUCIE
+              </a>
+
+
+              <a
+                class="relay-link"
+                href="Fiche Mécénat OPCO EP-P&amp;C-2607-v2.pdf"
+                download
+              >
+                OPCO EP
+              </a>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             2. INTERLOCUTEURS PME
+             ========================= -->
+
+
+        <div class="resource-group">
+
+          <h3 class="resource-group-title">
+            2. Préparer son échange avec une PME
+          </h3>
+
+
+          <div class="resource-grid-pme">
+
+
+            <!-- PC1 — LIGNE 1 -->
+
+
+            <article class="resource-card">
+
+              <span class="resource-type">
+                PC1
+              </span>
+
+              <h3>
+                Dirigeant
+              </h3>
+
+              <p>
+                Repères pour adapter l’échange au dirigeant d’une PME
+                correspondant au Profil Cible 1.
+              </p>
+
+              <a
+                class="btn btn-soft btn-download"
+                href="Fiche Dirigeant PC1-P&amp;C-2609-v2.pdf"
+                download
+              >
+                Télécharger
+              </a>
+
+            </article>
+
+
+            <article class="resource-card">
+
+              <span class="resource-type">
+                PC1
+              </span>
+
+              <h3>
+                DRH
+              </h3>
+
+              <p>
+                Repères pour un échange avec une DRH sur les enjeux de
+                fin de carrière et de transmission.
+              </p>
+
+              <a
+                class="btn btn-soft btn-download"
+                href="Fiche DRH PC1-P&amp;C-2609-v2.pdf"
+                download
+              >
+                Télécharger
+              </a>
+
+            </article>
+
+
+
+            <!-- PC2 — LIGNE 2 -->
+
+
+            <article class="resource-card">
+
+              <span class="resource-type">
+                PC2
+              </span>
+
+              <h3>
+                Dirigeant
+              </h3>
+
+              <p>
+                Repères pour explorer les enjeux de développement et de
+                fidélisation avec le dirigeant.
+              </p>
+
+              <a
+                class="btn btn-soft btn-download"
+                href="Fiche Dirigeant PC2-P&amp;C-2609-v2.pdf"
+                download
+              >
+                Télécharger
+              </a>
+
+            </article>
+
+
+            <article class="resource-card">
+
+              <span class="resource-type">
+                PC2
+              </span>
+
+              <h3>
+                DRH
+              </h3>
+
+              <p>
+                Repères permettant d’explorer avec la DRH les enjeux de
+                compétences clés et de fidélisation.
+              </p>
+
+              <a
+                class="btn btn-soft btn-download"
+                href="Fiche DRH PC2-P&amp;C-2609-v2.pdf"
+                download
+              >
+                Télécharger
+              </a>
+
+            </article>
+
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             3. PRÉSENTER LE MDC
+             ========================= -->
+
+
+        <div class="resource-group">
+
+          <h3 class="resource-group-title">
+            3. Présenter le MDC à l’entreprise
+          </h3>
+
+
+          <div class="resource-grid">
+
+
+            <article class="resource-card">
+
+              <span class="resource-type">
+                Document à remettre
+              </span>
+
+              <h3>
+                Flyer Entreprises 2026
+              </h3>
+
+              <p>
+                Une présentation synthétique du MDC destinée aux
+                dirigeants et collaborateurs de PME et ETI.
+              </p>
+
+              <a
+                class="btn btn-soft btn-download"
+                href="MDC - Flyer ENTREPRISES_2026.pdf"
+                download
+              >
+                Télécharger
+              </a>
+
+            </article>
+
+
+            <article class="resource-card">
+
+              <span class="resource-type">
+                Présentation
+              </span>
+
+              <h3>
+                Support de sensibilisation Entreprises 2026
+              </h3>
+
+              <p>
+                Le support destiné à présenter plus complètement le
+                mécénat de compétences aux entreprises.
+              </p>
+
+              <a
+                class="btn btn-soft btn-download"
+                href="MDC - Sensibilisation - Support  ENTREPRISES 2026.pdf"
+                download
+              >
+                Télécharger
+              </a>
+
+            </article>
+
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             4. KIT TERRAIN
+             ========================= -->
+
+
+        <div class="resource-group">
+
+          <h3 class="resource-group-title">
+            4. Préparer et capitaliser l’action terrain
           </h3>
 
 
@@ -2881,237 +3305,40 @@
 
 
 
-        <!-- 2. ACTEURS RELAIS -->
+        <!-- =========================
+             5. PITCH PME
+             ========================= -->
 
 
         <div class="resource-group">
 
           <h3 class="resource-group-title">
-            2. Travailler avec les acteurs relais
+            5. Préparer un pitch de présentation aux PME
           </h3>
 
 
-          <div class="relay-box">
-
-            <p>
-              Commencez par le guide d’activation, puis utilisez la
-              fiche correspondant à l’acteur relais que vous souhaitez
-              solliciter.
-            </p>
-
-
-            <div style="margin: 22px 0 28px;">
-
-              <a
-                class="btn btn-primary btn-download"
-                href="Guide Activation Acteurs relais-P&amp;C-2608-v2.pptx"
-                download
-              >
-                Guide Activation Acteurs relais
-              </a>
-
-            </div>
-
-
-            <div class="relay-grid">
-
-              <a
-                class="relay-link"
-                href="Fiche Mécénat CCI-P&amp;C-2606-v1.pdf"
-                download
-              >
-                CCI
-              </a>
-
-              <a
-                class="relay-link"
-                href="Fiche Mécénat CERFRANCE-P&amp;C-2607-v1.pdf"
-                download
-              >
-                CERFRANCE
-              </a>
-
-              <a
-                class="relay-link"
-                href="Fiche Mécénat CJD-P&amp;C-2607-v3.pdf"
-                download
-              >
-                CJD
-              </a>
-
-              <a
-                class="relay-link"
-                href="Fiche Mécénat CPME LESENTREPRENEURS-P&amp;C-2607-v1.pdf"
-                download
-              >
-                CPME / Les Entrepreneurs
-              </a>
-
-              <a
-                class="relay-link"
-                href="Fiche Mécénat FACE-P&amp;C-2607-v1.pdf"
-                download
-              >
-                FACE
-              </a>
-
-              <a
-                class="relay-link"
-                href="Fiche Mécénat KLESIA-P&amp;C-2608-v3.pdf"
-                download
-              >
-                KLESIA
-              </a>
-
-              <a
-                class="relay-link"
-                href="Fiche Mécénat LEE-P&amp;C-2607-v4.pdf"
-                download
-              >
-                Les Entreprises s’Engagent
-              </a>
-
-              <a
-                class="relay-link"
-                href="Fiche Mécénat LEPC-P&amp;C-2608-v2.pdf"
-                download
-              >
-                LEPC
-              </a>
-
-              <a
-                class="relay-link"
-                href="Fiche Mécénat LUCIE-P&amp;C-2607-v2.pdf"
-                download
-              >
-                LUCIE
-              </a>
-
-              <a
-                class="relay-link"
-                href="Fiche Mécénat OPCO EP-P&amp;C-2607-v2.pdf"
-                download
-              >
-                OPCO EP
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- 3. INTERLOCUTEURS PME -->
-
-
-        <div class="resource-group">
-
-          <h3 class="resource-group-title">
-            3. Préparer son échange avec la PME
-          </h3>
-
-
-          <div class="resource-grid">
+          <div class="resource-grid-single">
 
 
             <article class="resource-card">
 
               <span class="resource-type">
-                PC1
+                Pitch
               </span>
 
               <h3>
-                Dirigeant
+                Pitch MDC — PME
               </h3>
 
               <p>
-                Repères pour adapter l’échange au dirigeant d’une PME
-                correspondant au Profil Cible 1.
+                Un support pour préparer une présentation courte,
+                claire et structurée du mécénat de compétences auprès
+                d’une PME.
               </p>
 
               <a
                 class="btn btn-soft btn-download"
-                href="Fiche Dirigeant PC1-P&amp;C-2609-v2.pdf"
-                download
-              >
-                Télécharger
-              </a>
-
-            </article>
-
-
-            <article class="resource-card">
-
-              <span class="resource-type">
-                PC1
-              </span>
-
-              <h3>
-                DRH
-              </h3>
-
-              <p>
-                Repères pour un échange avec une DRH sur les enjeux de
-                fin de carrière et de transmission.
-              </p>
-
-              <a
-                class="btn btn-soft btn-download"
-                href="Fiche DRH PC1-P&amp;C-2609-v2.pdf"
-                download
-              >
-                Télécharger
-              </a>
-
-            </article>
-
-
-            <article class="resource-card">
-
-              <span class="resource-type">
-                PC2
-              </span>
-
-              <h3>
-                Dirigeant
-              </h3>
-
-              <p>
-                Repères pour explorer les enjeux de développement et de
-                fidélisation avec le dirigeant.
-              </p>
-
-              <a
-                class="btn btn-soft btn-download"
-                href="Fiche Dirigeant PC2-P&amp;C-2609-v2.pdf"
-                download
-              >
-                Télécharger
-              </a>
-
-            </article>
-
-
-            <article class="resource-card">
-
-              <span class="resource-type">
-                PC2
-              </span>
-
-              <h3>
-                DRH
-              </h3>
-
-              <p>
-                Repères permettant d’explorer avec la DRH les enjeux de
-                compétences clés et de fidélisation.
-              </p>
-
-              <a
-                class="btn btn-soft btn-download"
-                href="Fiche DRH PC2-P&amp;C-2609-v2.pdf"
+                href="Pitch MDC-P&amp;C_2610-v1.pdf"
                 download
               >
                 Télécharger
@@ -3124,76 +3351,6 @@
 
         </div>
 
-
-
-        <!-- 4. SENSIBILISATION ENTREPRISE -->
-
-
-        <div class="resource-group">
-
-          <h3 class="resource-group-title">
-            4. Présenter le MDC à l’entreprise
-          </h3>
-
-
-          <div class="resource-grid">
-
-
-            <article class="resource-card">
-
-              <span class="resource-type">
-                Document à remettre
-              </span>
-
-              <h3>
-                Flyer Entreprises 2026
-              </h3>
-
-              <p>
-                Une présentation synthétique du MDC destinée aux
-                dirigeants et collaborateurs de PME et ETI.
-              </p>
-
-              <a
-                class="btn btn-soft btn-download"
-                href="MDC - Flyer ENTREPRISES_2026.pdf"
-                download
-              >
-                Télécharger
-              </a>
-
-            </article>
-
-
-            <article class="resource-card">
-
-              <span class="resource-type">
-                Présentation
-              </span>
-
-              <h3>
-                Support de sensibilisation Entreprises 2026
-              </h3>
-
-              <p>
-                Le support destiné à présenter plus complètement le
-                mécénat de compétences aux entreprises.
-              </p>
-
-              <a
-                class="btn btn-soft btn-download"
-                href="MDC - Sensibilisation - Support  ENTREPRISES 2026.pdf"
-                download
-              >
-                Télécharger
-              </a>
-
-            </article>
-
-
-          </div>
-
-        </div>
 
       </div>
 
@@ -3201,7 +3358,9 @@
 
 
 
-    <!-- CONCLUSION -->
+    <!-- =========================
+         CONCLUSION
+         ========================= -->
 
 
     <section class="section-violet">
@@ -3254,7 +3413,9 @@
 
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+       ========================= -->
 
 
   <footer>
@@ -3287,7 +3448,7 @@
 
 
       <div class="footer-small">
-        Espace référents MDC — version septembre 2026
+        Espace référents MDC — version octobre 2026
       </div>
 
     </div>
